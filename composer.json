@@ -1,0 +1,54 @@
+{
+    "name": "ekvedaras/doctrine-enum",
+    "description": "Doctrine integration for ekvedaras/php-enum",
+    "license": "MIT",
+    "homepage": "https://github.com/ekvedaras/doctrine-enum",
+    "keywords": [
+        "ekvedaras",
+        "php",
+        "doctrine",
+        "enum",
+        "enumerable"
+    ],
+    "authors": [
+        {
+            "name": "Ernestas Kvedaras",
+            "email": "kvedaras.ernestas@gmail.com",
+            "homepage": "https://github.com/ekvedaras",
+            "role": "author"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EKvedaras\\DoctrineEnum\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*",
+        "ekvedaras/php-enum": "^1.3",
+        "doctrine/dbal": "^2.6"
+    },
+    "require-dev": {
+        "doctrine/collections": "^1.6",
+        "phpunit/phpunit": "^8.5.8"
+    },
+    "suggest": {
+        "doctrine/collections": "Used as default implementation of ekvedaras/php-enum"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cover": "phpunit --coverage-html=build",
+        "ci": "phpunit --coverage-clover=build/clover.xml --coverage-xml=build/coverage-xml --log-junit=build/junit.xml"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
